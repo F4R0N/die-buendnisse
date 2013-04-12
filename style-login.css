@@ -1,0 +1,41 @@
+body {
+	background: #cdaf95;
+	font-size: 1.1em;
+}
+
+.header {
+	font-family: 'Fondamento', cursive;
+}
+
+.center {
+	text-align: center;
+}
+
+#login {
+	border-radius: 5%;
+	width: 10em;
+	margin: auto;
+	margin-top: 4em;
+	padding: 1em;
+	box-shadow: 0.1em 0.1em 0.3em black;
+	background-color: #990000;
+	color: white;
+}
+
+#login h3 {
+	margin-top: 0em;
+}
+
+#login input {
+	margin-bottom: 0.7em;
+}
+
+#login input[type = 'submit']  {
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	margin-top: 1.5em;
+	font-size: 0.9em;
+}
+
+
