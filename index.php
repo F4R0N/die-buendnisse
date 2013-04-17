@@ -1,15 +1,16 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
+        <head>
+            <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
 		<title>
-			Die Bündnisse
+			Die B&uuml;ndnisse
 		</title>
 		<link href='http://fonts.googleapis.com/css?family=Fondamento' rel='stylesheet' type='text/css'>
 		<link href="style-login.css" rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<header>
-			<h1 class="header center">Die Bündnisse</h1>
+			<h1 class="header center">Die B&uuml;ndnisse</h1>
 		</header>
 		<article>
 			<section id="login" class="center">
