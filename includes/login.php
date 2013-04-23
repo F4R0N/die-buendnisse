@@ -8,7 +8,7 @@ class login {
     private $Passwort;
     private $ID;
 
-    function __construct($Benutzername=0, $Passwort=0) {
+    function set_data($Benutzername, $Passwort) {
         $this->Benutzername = $Benutzername;
 
         $Passwort = crypt($Passwort, '$6$BR0WS3RG4M3');
@@ -66,16 +66,19 @@ class login {
     }
 
     function logout() {
-            mysql_query("UPDATE 
+        $mysql_connection = new mysql_connection();
+        $mysql_connection->connect_MYSQL();
+
+        mysql_query("UPDATE 
                         users 
                      SET
                        letzte_Aktion = " . time() . ",
-                       session_ID    = '',
-                       IP            = '" . $_SERVER['REMOTE_ADDR'] . "'          
+                       session_ID    = ''         
                      WHERE
-                       ID = " . $_SESSION['ID']);
-            session_destroy();
-            return true;
+                       ID = " . $_SESSION['ID']) or die(mysql_error());
+        $mysql_connection->close_MYSQL();
+        session_destroy();
+        return true;
     }
 
 }
