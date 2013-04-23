@@ -1,4 +1,0 @@
-die_buendnisse
-==============
-
-Browsergame
