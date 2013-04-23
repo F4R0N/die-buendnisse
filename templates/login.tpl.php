@@ -11,7 +11,7 @@
 <article>
     <section id="login" class="center">
         <?php if (isset($data['login_msg'])): ?>
-            <section id="login_msg"><?php print $data['login_msg']; ?></section>
+            <section id="login_msg"><?= $data['login_msg']; ?></section>
         <?php endif; ?>
         <h3 class="header center">Login</h3>
         <form action="" method="POST" accept-charset="ISO-ISO-8859-1">
