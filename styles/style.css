@@ -1,4 +1,5 @@
 body {
+    margin-top: 3em;
     background-color: #CBAE8C;
     font-size: 1.1em;
 }
@@ -9,4 +10,43 @@ body {
 
 .header {
     font-family: 'Fondamento', cursive;
+}
+
+
+#top {
+    border: thin solid black;
+    background-color: midnightblue;
+    opacity: 0.97;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0.5em;
+    border-radius: 0 0 10px 10px;
+}
+
+#top ul li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+#top ul li a{
+    color: white;
+}
+
+#left {
+    position: fixed; 
+    left: 0;
+    background-color: blue;
+}
+
+#left ul li {
+    display: block;
+}
+
+#left ul li a img {
+    padding-left: 0;
+    height: 40px;
+    width: 40px;
 }

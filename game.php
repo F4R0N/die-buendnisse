@@ -28,6 +28,8 @@ if (!isset($template_name) || !in_array($_GET['page'], $allowed_templates)) {
 }
 
 include_template("header");
+include_template("menu_top");
+include_template("menu_left");
 include_template($template_name);
 include_template("footer");
 ?>

@@ -1,7 +1,7 @@
 <link href="styles/style-login.css" rel='stylesheet' type='text/css'>
 <script>
     $(document).ready(function() {
-        $('#login_msg').fadeOut(3000);
+        $('input[type=text]').focus();
     });
 </script>
 
@@ -11,6 +11,11 @@
 <article>
     <section id="login" class="center">
         <?php if (isset($data['login_msg'])): ?>
+        <script>
+            $(document).ready(function() {
+               $('#login_msg').fadeOut(3000);
+            });
+        </script>
             <section id="login_msg"><?= $data['login_msg']; ?></section>
         <?php endif; ?>
         <h3 class="header center">Login</h3>
