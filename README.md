@@ -1,4 +1,4 @@
 die_buendnisse
 ==============
 
-Browsergame
+- created basic folders/files
