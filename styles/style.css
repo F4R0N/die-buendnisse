@@ -4,12 +4,21 @@ body {
     font-size: 1.1em;
 }
 
+a {
+    text-decoration: none;
+    color: firebrick;
+}
+
 .center {
     text-align: center;
 }
 
 .header {
     font-family: 'Fondamento', cursive;
+}
+
+#main_content {
+    margin-left: 4em;
 }
 
 
@@ -36,17 +45,37 @@ body {
 }
 
 #left {
+    background-color: #CCC;
     position: fixed; 
     left: 0;
-    background-color: blue;
+    top: 20%;
+    min-height: 50%;
+    border-radius: 0 10px 10px 0;
+    border: thin solid #777;
 }
 
 #left ul li {
     display: block;
+    padding: 0.25em;
+    padding-left: 0;
+}
+
+#left ul {
+    padding: 0.5em;
 }
 
 #left ul li a img {
-    padding-left: 0;
     height: 40px;
     width: 40px;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 420px){
+    #top {
+        position: absolute;
+        line-height: 2;
+    }
+    body{
+        margin-top: 8em;
+    }
 }
