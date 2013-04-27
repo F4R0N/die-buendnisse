@@ -12,7 +12,7 @@ mysql_query('
     SET
         session_ID = NULL
     WHERE
-        last_action > "' . (time() - 60 * 1) . '"
+        last_action < "' . (time() - 60 * 20) . '"
 ');
 
 if (isset($_SESSION['ID'])) {
