@@ -3,5 +3,4 @@
 </header>
 <div id="main_content">
     Willkommen im Spiel Nr. <?= $_SESSION['ID']; ?>, Was willst du tun?
-    <a href="?logout=true">Logout</a>
 </div>

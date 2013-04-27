@@ -19,20 +19,21 @@ a {
 }
 
 #main_content {
-    margin-left: 4em;
+    margin-left: 4em;0
 }
 
 
 #top {
-    border: thin solid black;
     background-color: midnightblue;
+    border: thin solid black;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 3px 3px 9px black;
+    left: 0;
+    line-height: 0.5em;
+    min-width: 100%;
     opacity: 0.97;
     position: fixed;
     top: 0;
-    left: 0;
-    min-width: 100%;
-    line-height: 0.5em;
-    border-radius: 0 0 10px 10px;
     z-index: 9999;
 }
 
@@ -48,12 +49,13 @@ a {
 
 #left {
     background-color: #CCC;
-    position: fixed; 
-    left: 0;
-    top: 6.5em;
-    min-height: 20em;
-    border-radius: 0 10px 10px 0;
     border: thin solid #777;
+    border-radius: 0 10px 10px 0;
+    left: 0;
+    min-height: 20em;
+    position: fixed;
+    top: 6.5em;
+
 }
 
 #left ul li {
@@ -67,15 +69,31 @@ a {
 }
 
 #left ul li a img {
+    border-radius: 5px;
     height: 40px;
     width: 40px;
+}
+
+
+.info_hide {
+    display: none;
+}
+
+.info_show {
+    display: default;
+    position: absolute;
+    background-color: #AAA;
+    padding: 0.25em;
     border-radius: 5px;
+    border: thin solid black;
+    left: 3.7em;
+    margin-top: -2em;
 }
 
 @media only screen and (max-width: 420px){
     #top {
         position: absolute;
-        line-height: 2;
+        line-height: 1;
     }
     body{
         margin-top: 8em;
