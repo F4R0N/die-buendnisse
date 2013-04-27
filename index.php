@@ -1,11 +1,12 @@
 <?php
+
 session_start();
 
 include "../private/mysql.php";
 include "includes/login.php";
-include "includes/template.php";
+include "includes/include.php";
 
-if (isset($_POST['Benutzername']) && isset($_POST['Passwort'])) {
+if (isset($_POST['Benutzername']) && isset($_POST['Passwort']) && isset($_POST['Einloggen'])) {
     $login = new login();
     $login->set_data($_POST['Benutzername'], $_POST['Passwort']);
     if ($login->login())

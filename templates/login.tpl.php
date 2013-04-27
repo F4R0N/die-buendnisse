@@ -11,11 +11,11 @@
 <div>
     <div id="login" class="center">
         <?php if (isset($data['login_msg'])): ?>
-        <script>
-            $(document).ready(function() {
-               $('#login_msg').fadeOut(3000);
-            });
-        </script>
+            <script>
+                $(document).ready(function() {
+                    $('#login_msg').fadeOut(3000);
+                });
+            </script>
             <div id="login_msg"><?= $data['login_msg']; ?></div>
         <?php endif; ?>
         <h3 class="header center">Login</h3>

@@ -1,1 +1,1 @@
-<i>ERROR: <?php echo $data['msg']; ?> </i>
+<i>ERROR: <?= $data['msg']; ?> </i>

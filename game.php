@@ -4,7 +4,7 @@ session_start();
 
 include "../private/mysql.php";
 include "includes/check_login.php";
-include "includes/template.php";
+include "includes/include.php";
 include "includes/login.php";
 
 if (!isset($_SESSION['ID'])) {
@@ -17,21 +17,21 @@ if ($_GET['logout']) {
     header('LOCATION: index.php');
 }
 
-$allowed_templates = array(
+$allowed_pages = array(
     'overview',
     'messages',
     'map'
 );
 
-$template_name = $_GET['page'];
+$page_name = $_GET['page'];
 
-if (!isset($template_name) || !in_array($_GET['page'], $allowed_templates)) {
-    $template_name = "overview";
+if (!isset($page_name) || !in_array($_GET['page'], $allowed_pages) || $page_name = "overview") {
+    $page_name = "overview";
 }
 
 include_template("header");
 include_template("menu_top");
 include_template("menu_left");
-include_template($template_name);
+include_includes($page_name);
 include_template("footer");
 ?>

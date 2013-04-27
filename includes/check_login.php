@@ -16,7 +16,7 @@ mysql_query('
 ');
 
 if (isset($_SESSION['ID'])) {
-    
+
     mysql_query('
         UPDATE
             users
@@ -25,7 +25,7 @@ if (isset($_SESSION['ID'])) {
         WHERE
             ID = "' . $_SESSION['ID'] . '"
     ');
-    
+
     $result = mysql_query('
         SELECT
             session_ID
@@ -34,9 +34,9 @@ if (isset($_SESSION['ID'])) {
         WHERE
             ID = "' . $_SESSION['ID'] . '"
     ');
-    
+
     $row = mysql_fetch_assoc($result);
-    
+
     if (!$row['session_ID']) {
         unset($_SESSION);
         session_destroy();

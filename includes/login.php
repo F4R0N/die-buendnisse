@@ -22,17 +22,18 @@ class login {
         $mysql_connection = new mysql_connection();
         $mysql_connection->connect_MYSQL();
 
-        if ($this->check_login_data($Benutzername, $Passwort)) {
+        if ($this->check_login_data()) {
             $this->doLogin();
+            $mysql_connection->close_MYSQL();
             return true;
+        } else {
+            $mysql_connection->close_MYSQL();
+
+            return false;
         }
-
-        $mysql_connection->close_MYSQL();
-
-        return false;
     }
 
-    function check_login_data($Benutzername, $Passwort) {
+    function check_login_data() {
 
         $result = mysql_query("SELECT
                                     ID 
@@ -75,7 +76,7 @@ class login {
                        last_action = " . time() . ",
                        session_ID    = NULL         
                      WHERE
-                       ID = " . $_SESSION['ID']) or die(mysql_error());
+                       ID = " . $_SESSION['ID']);
         $mysql_connection->close_MYSQL();
         session_destroy();
         return true;

@@ -97,16 +97,16 @@ a {
     body{
         margin-top: 8em;
     }
-    
+
     .header {
         display: none;
     }
-    
+
     #top {
         position: absolute;
         line-height: 1;
     }
-    
+
     #top ul li {
         display: block;
         margin: 0.1em;
