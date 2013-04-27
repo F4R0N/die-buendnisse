@@ -2,13 +2,14 @@
 
 session_start();
 
+include "../private/mysql.php";
+include "includes/check_login.php";
+include "includes/template.php";
+include "includes/login.php";
+
 if (!isset($_SESSION['ID'])) {
     header('LOCATION: index.php');
 }
-
-include "../private/mysql.php";
-include "includes/login.php";
-include "includes/template.php";
 
 if ($_GET['logout']) {
     $logout = new login();
@@ -18,7 +19,8 @@ if ($_GET['logout']) {
 
 $allowed_templates = array(
     'overview',
-    'messages'
+    'messages',
+    'map'
 );
 
 $template_name = $_GET['page'];

@@ -10,11 +10,11 @@
             <div class="info_hide">Einstellungen</div>
         </li>
         <li>
-            <a href="#"><img src="/images/profil.png" title="Nachrichten"></a>
+            <a href="#"><img src="/images/message.png" title="Nachrichten"></a>
             <div class="info_hide">Nachrichten</div>
         </li>
         <li>
-            <a href="game.php?logout=true"><img src="/images/logout.png" title="Logout">L</a>
+            <a href="game.php?logout=true"><img src="/images/logout.png" title="Logout"></a>
             <div class="info_hide">Logout</div>
         </li>
     </ul>

@@ -39,8 +39,8 @@ class login {
                                FROM 
                                     users 
                                WHERE
-                                    Benutzername = '" . mysql_real_escape_string($this->Benutzername) . "' AND
-                                    Passwort     = '" . mysql_real_escape_string($this->Passwort) . "'") or die(mysql_error());
+                                    username = '" . mysql_real_escape_string($this->Benutzername) . "' AND
+                                    password     = '" . mysql_real_escape_string($this->Passwort) . "'") or die(mysql_error());
 
 
 
@@ -56,8 +56,8 @@ class login {
         mysql_query("UPDATE 
                         users 
                      SET
-                       letzter_Login = " . time() . ",
-                       letzte_Aktion = " . time() . ",
+                       last_login = " . time() . ",
+                       last_action = " . time() . ",
                        session_ID    = '" . session_id() . "',
                        IP            = '" . $_SERVER['REMOTE_ADDR'] . "'          
                      WHERE
@@ -72,8 +72,8 @@ class login {
         mysql_query("UPDATE 
                         users 
                      SET
-                       letzte_Aktion = " . time() . ",
-                       session_ID    = ''         
+                       last_action = " . time() . ",
+                       session_ID    = NULL         
                      WHERE
                        ID = " . $_SESSION['ID']) or die(mysql_error());
         $mysql_connection->close_MYSQL();
