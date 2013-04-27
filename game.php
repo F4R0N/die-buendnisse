@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+echo "Keks";
 
 include "../private/mysql.php";
 include "includes/check_login.php";
