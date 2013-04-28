@@ -13,3 +13,9 @@
         <button type="submit" name="registrieren" value="true">Registrieren</button>
     </form>
 </div>
+<?php
+        foreach($data['errors'] as $error){
+            echo $error;
+            echo "<br/>";
+        }
+    ?>
