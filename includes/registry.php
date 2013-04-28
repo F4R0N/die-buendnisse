@@ -46,7 +46,7 @@
                                 '". mysql_real_escape_string($email) ."',
                                 '". $_SERVER['REMOTE_ADDR'] ."'
                                 )");
-           echo "Erfolgreich";
+           $data['success'] = true;
         }else{
             $data["errors"] = $errors;       
             $data['form_data']['benutzername'] = $username;

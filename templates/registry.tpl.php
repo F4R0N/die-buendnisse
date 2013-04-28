@@ -3,6 +3,10 @@
     <h1 class="header center">Die B&uuml;ndnisse</h1>
 </header>
 <div id="box"  class="center">
+    <?php if($data['success']): ?>
+        <script src="/js/registry_go_on_link.js"></script>
+  <?php endif; ?>
+    
     <?php if ($data['errors']['felder_leer']): ?>
         <script>
             $(document).ready(function() {
