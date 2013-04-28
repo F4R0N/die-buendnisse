@@ -9,14 +9,14 @@
     <h1 class="header center">Die B&uuml;ndnisse</h1>
 </header>
 <div>
-    <div id="login" class="center">
+    <div id="box" class="center">
         <?php if (isset($data['login_msg'])): ?>
             <script>
                 $(document).ready(function() {
-                    $('#login_msg').fadeOut(3000);
+                    $('#box_msg').fadeOut(3000);
                 });
             </script>
-            <div id="login_msg"><?= $data['login_msg']; ?></div>
+            <div id="box_msg"><?= $data['login_msg']; ?></div>
         <?php endif; ?>
         <h3 class="header center">Login</h3>
         <form action="" method="POST" accept-charset="ISO-ISO-8859-1">
@@ -24,7 +24,8 @@
             <input type="text" name="Benutzername" maxlength="32">
             Passwort
             <input type="password" name="Passwort" placeholder="******">
-            <input type="submit" name="Einloggen" value="Einloggen">
+            <a href="/?page=registry">Hier registrieren!</a>
+            <button type="submit" name="Einloggen" value="true">Einloggen</button>
         </form>
     </div>
 </div>

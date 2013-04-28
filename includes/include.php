@@ -16,7 +16,7 @@ function include_template($tpl_name, $data = array()) {
     }
 }
 
-function include_includes($inc_name) {
+function include_includes($inc_name, $data = array()) {
 
     $path = 'includes/' . $inc_name . '.php';
 

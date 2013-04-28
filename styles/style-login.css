@@ -1,4 +1,12 @@
-#login_msg {
+a{
+    color: lime;
+    background-color: blue;
+    padding: 0.2em;
+    text-decoration: blink;
+    border-radius: 100%;
+    font-size: x-large;
+}
+#box_msg {
     position: absolute;
     border: thin solid black;
     padding: 5px;
@@ -6,21 +14,21 @@
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background-color: firebrick;
-    top: 12%;
+    top: 1.337em;
     left: 40%;
     min-width: 20%;
     margin: auto;
     opacity: 0.95;
 }
 
-#login {
+#box {
     -moz-border-radius: 5%;
     -webkit-border-radius: 5%;
     border-radius: 5%;
     box-shadow: 3px 3px 23px black;
     width: 10em;
     margin: auto;
-    margin-top: 4em;
+    margin-top: 2em;
     padding: 1em;
     -moz-box-shadow: 0.1em 0.1em 0.3em black;
     -webkit-box-shadow: 0.1em 0.1em 0.3em black;
@@ -28,20 +36,23 @@
     color: white;
 }
 
-#login h3 {
+#box h3 {
     margin-top: 0em;
 }
 
-#login input {
-    margin-bottom: 0.7em;
-    width: 10em;
+#box input[type="text"], input[type="password"], input[type="email"]{
+    margin-bottom: 1.337em;
+    width: 92%;
+    border-radius: 5px;
+    padding: 0.23em;
+    font-size: 15px;
 }
 
-#login input[type = 'submit']  {
+#box button  {
     background-color: #CCCCCC;
     border-color: #EEEEEE #CCCCCC #CCCCCC #EEEEEE;
-    border-radius: 18px 18px 18px 18px;
+    border-radius: 10px;
     font-size: 0.9em;
-    margin-top: 1.5em;
+    margin-top: 1em;
     padding: 0.15em;
 }

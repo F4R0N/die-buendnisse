@@ -1,12 +1,11 @@
 <?php
 
 session_start();
-echo "Keks";
 
 include "../private/mysql.php";
 include "includes/check_login.php";
 include "includes/include.php";
-include "includes/login.php";
+include "includes/login_class.php";
 
 if (!isset($_SESSION['ID'])) {
     header('LOCATION: index.php');
@@ -26,7 +25,7 @@ $allowed_pages = array(
 
 $page_name = $_GET['page'];
 
-if (!isset($page_name) || !in_array($_GET['page'], $allowed_pages) || $page_name = "overview") {
+if (!isset($page_name) || !in_array($_GET['page'], $allowed_pages)) {
     $page_name = "overview";
 }
 
