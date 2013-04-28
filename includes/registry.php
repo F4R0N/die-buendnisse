@@ -20,7 +20,7 @@
             $errors['felder_leer'] = true;
         if(strlen($username) > 32)
             $errors['benutzername_laenge'] = "Username ist l&auml;nger als 32";
-        if(strlen($passwort) < 6 && strlen($passwort) > 0)
+        if(strlen($passwort) < 6)
             $errors['passwort_laenge'] = true;
         if($passwort != $passwort_wdh)
             $errors['passwort_wdh'] = true;
