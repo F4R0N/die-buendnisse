@@ -12,20 +12,22 @@
         $errors = array();
         $result = mysql_query("SELECT ID FROM users WHERE username = '". $username ."'") or die(mysql_error());
         if(mysql_num_rows($result) != 0)
-            $errors[] = "Benutzername bereits vorhanden";
+            $errors['benutzername_vorhanden'] = true;
          $result = mysql_query("SELECT ID FROM users WHERE email = '". $email ."'");
         if(mysql_num_rows($result) != 0)
-            $errors[] = "E-Mail wird bereits verwendet";
+            $errors['email_vorhanden'] = true;
         if($username == "" || $passwort == "" || $passwort_wdh == "" || $email == "")
-            $errors[] = "Felder nicht alle ausgef&uuml;t";
+            $errors['felder_leer'] = true;
         if(strlen($username) > 32)
-            $errors[] = "Username ist l&auml;nger als 32";
+            $errors['benutzername_laenge'] = "Username ist l&auml;nger als 32";
+        if(strlen($passwort) < 6 && strlen($passwort) > 0)
+            $errors['passwort_laenge'] = true;
         if($passwort != $passwort_wdh)
-            $errors[] = "Passw&ouml;rter stimmen nicht &uml;berein";
+            $errors['passwort_wdh'] = true;
         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
-            $errors[] = "Ung&uuml;ltige E-Mail-Adresse";
+            $errors['email_falsch'] = true;
         if($check_agbs != "true")
-            $errors[] = "AGBs sind nicht akzeptiert";
+            $errors['agbs'] = true;
         
         if(!count($errors)){
            $passwort = crypt($passwort, '$6$BR0WS3RG4M3');
@@ -46,7 +48,9 @@
                                 )");
            echo "Erfolgreich";
         }else{
-            $data["errors"] = $errors;
+            $data["errors"] = $errors;       
+            $data['form_data']['benutzername'] = $username;
+            $data['form_data']['email'] = $email;
         }
         $mysql_connection->close_MYSQL();
     }
