@@ -48,6 +48,10 @@ a{
     font-size: 15px;
 }
 
+#box input[type="checkbox"] {
+   width: 15px;
+}
+
 #box button  {
     background-color: #CCCCCC;
     border-color: #EEEEEE #CCCCCC #CCCCCC #EEEEEE;
