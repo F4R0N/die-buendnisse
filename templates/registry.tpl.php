@@ -3,10 +3,10 @@
     <h1 class="header center">Die B&uuml;ndnisse</h1>
 </header>
 <div id="box"  class="center">
-    <?php if($data['success']): ?>
+    <?php if ($data['success']): ?>
         <script src="/js/registry_go_on_link.js"></script>
-  <?php endif; ?>
-    
+    <?php endif; ?>
+
     <?php if ($data['errors']['felder_leer']): ?>
         <script>
             $(document).ready(function() {
@@ -17,7 +17,7 @@
     <?php endif; ?>
     <h3 class="header center">Registrieren</h3>
     <form action="" method="POST" accept-charset="ISO-ISO-8859-1">
-        <input value="<?=$data['form_data']['benutzername'] ?>" type="text" name="benutzername" maxlength="32" placeholder="Benutzername">
+        <input value="<?= htmlentities($data['form_data']['benutzername']) ?>" type="text" name="benutzername" maxlength="32" placeholder="Benutzername">
         <?php if ($data['errors']['benutzername_vorhanden']): ?>
             <div class="error">Benutzername bereits vorhanden</div>
         <?php endif; ?>
@@ -27,7 +27,7 @@
         </input>
         <input type="password" name="passwort" placeholder="Passwort">
         <?php if ($data['errors']['passwort_laenge']): ?>
-            <div class="error">Passwort sollte l&auml;ger als 6 Zeichen sein!</div>
+            <div class="error">Passwort sollte mehr als 6 Zeichen haben!</div>
         <?php endif; ?>
         </input>
         <input type="password" name="passwort_wdh" placeholder="Passwort wiederholen">
@@ -35,12 +35,12 @@
             <div class="error">Passw&ouml;rter stimmen nicht &uuml;berein!</div>
         <?php endif; ?>
         </input>
-        <input value="<?=$data['form_data']['email'] ?>" type="email" name="email" placeholder="E-Mail">
+        <input value="<?= htmlentities($data['form_data']['email']) ?>" type="email" name="email" placeholder="E-Mail">
         <?php if ($data['errors']['email_vorhanden']): ?>
-            <div class="error">E-Mail wird bereits verwendet</div>
+            <div class="error">E-Mail-Adresse wird bereits verwendet</div>
         <?php endif; ?>
         <?php if ($data['errors']['email_falsch']): ?>
-            <div class="error">E-Mail ist falsch!</div>
+            <div class="error">E-Mail-Adresse ist falsch!</div>
         <?php endif; ?>
         </input>
         AGBs akzeptieren<input type="checkbox" name="agbs" value="true">

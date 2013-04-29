@@ -1,11 +1,14 @@
 <?php
 
+$time_start = microtime(true);
+
 session_start();
 
 include "../private/mysql.php";
+include "includes/player.class.php";
 include "includes/check_login.php";
 include "includes/include.php";
-include "includes/login_class.php";
+include "includes/login.class.php";
 
 if (!isset($_SESSION['ID'])) {
     header('LOCATION: index.php');
@@ -33,5 +36,9 @@ include_template("header");
 include_template("menu_top");
 include_template("menu_left");
 include_includes($page_name);
-include_template("footer");
+
+$time_end = microtime(true);
+$data['time'] = round(($time_end - $time_start) * 1000);
+
+include_template("footer", $data);
 ?>

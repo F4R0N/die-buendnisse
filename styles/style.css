@@ -93,6 +93,13 @@ a {
     margin-top: -2.2em;
 }
 
+.server_info {
+    font-style: italic;
+    font-size: 50%;
+    text-align: center;
+    margin-top: 5em;
+}
+
 @media only screen and (max-width: 400px){
     body{
         margin-top: 8em;
