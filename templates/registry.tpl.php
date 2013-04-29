@@ -14,7 +14,7 @@
     <h3 class="header center">Registrieren</h3>
     <?php if ($data['success']): ?>
         <script src="/js/registry_go_on_link.js"></script>
-        <div class="success_message" style="display:none;">
+        <div class="success_message" style="display: none">
             Herzlich Willkommen im Spiel <?= htmlentities($data['form_data']['benutzername']) ?>!
             Wir haben dir einen Best&auml;tigungslink an <?= htmlentities($data['form_data']['email']) ?> gesendet!
             Du kannst dich <a href="/?page=login">hier</a> einloggen!
