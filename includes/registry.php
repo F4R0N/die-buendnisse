@@ -49,9 +49,10 @@
            $data['success'] = true;
         }else{
             $data["errors"] = $errors;       
-            $data['form_data']['benutzername'] = $username;
-            $data['form_data']['email'] = $email;
         }
+        $data['form_data']['benutzername']  = $username;
+        $data['form_data']['email']         = $email;
+        
         $mysql_connection->close_MYSQL();
     }
 ?>

@@ -3,10 +3,6 @@
     <h1 class="header center">Die B&uuml;ndnisse</h1>
 </header>
 <div id="box"  class="center">
-    <?php if ($data['success']): ?>
-        <script src="/js/registry_go_on_link.js"></script>
-    <?php endif; ?>
-
     <?php if ($data['errors']['felder_leer']): ?>
         <script>
             $(document).ready(function() {
@@ -16,7 +12,15 @@
         <div id="box_msg">Felder wurden nicht ausgef&uuml;llt!</div>
     <?php endif; ?>
     <h3 class="header center">Registrieren</h3>
-    <form action="" method="POST" accept-charset="ISO-ISO-8859-1">
+    <?php if ($data['success']): ?>
+        <script src="/js/registry_go_on_link.js"></script>
+        <div class="success_message" style="display:none;">
+            Herzlich Willkommen im Spiel <?= htmlentities($data['form_data']['benutzername']) ?>!
+            Wir haben dir einen Best&auml;tigungslink an <?= htmlentities($data['form_data']['email']) ?> gesendet!
+            Du kannst dich <a href="/?page=login">hier</a> einloggen!
+        </div>
+    <?php endif; ?>
+    <form action="" method="POST" accept-charset="ISO-ISO-8859-1" class="registry_form">
         <input value="<?= htmlentities($data['form_data']['benutzername']) ?>" type="text" name="benutzername" maxlength="32" placeholder="Benutzername">
         <?php if ($data['errors']['benutzername_vorhanden']): ?>
             <div class="error">Benutzername bereits vorhanden</div>
