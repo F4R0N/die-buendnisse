@@ -124,6 +124,13 @@ a {
     }
 }
 
+#login_overview_field{
+    border: thin solid blue;
+    background-color: white;
+    padding: 1.337em;
+    width: 42em;
+}
+
 /* Settings */
 #nav {
     position:relative;
