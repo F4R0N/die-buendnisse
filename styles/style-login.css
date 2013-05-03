@@ -1,10 +1,18 @@
-a{
-    color: lime;
-    background-color: blue;
-    padding: 0.2em;
-    text-decoration: blink;
-    border-radius: 100%;
+#loginpage_registry_button{
+    color: #DDEEDD;
+    background-color: green;
+    padding: 0.3em;
+    border-radius: 5px;
     font-size: x-large;
+    box-shadow: 4px 4px 1px #000;
+}
+
+#loginpage_registry_button:hover{
+    background-image: linear-gradient(180deg, #161, green);
+}
+#registry_complete_login_button{
+    color: lightblue;
+    font-size: larger;
 }
 #box_msg {
     position: absolute;
