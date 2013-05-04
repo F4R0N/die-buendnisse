@@ -17,7 +17,7 @@
         <div class="success_message" style="display: none">
             Herzlich Willkommen im Spiel <?= htmlentities($data['form_data']['benutzername']) ?>!
             Wir haben dir einen Best&auml;tigungslink an <?= htmlentities($data['form_data']['email']) ?> gesendet!
-            Du kannst dich <a href="/?page=login">hier</a> einloggen!
+            Du kannst dich <a href="/?page=login" id="registry_complete_login_button">hier</a> einloggen!
         </div>
     <?php endif; ?>
     <form action="" method="POST" accept-charset="ISO-ISO-8859-1" class="registry_form">

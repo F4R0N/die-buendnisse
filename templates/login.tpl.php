@@ -24,7 +24,7 @@
             <input type="text" name="Benutzername" maxlength="32">
             Passwort
             <input type="password" name="Passwort" placeholder="******">
-            <a href="/?page=registry">Hier registrieren!</a>
+            <a href="/?page=registry" id="loginpage_registry_button">Hier registrieren!</a>
             <button type="submit" name="Einloggen" value="true">Einloggen</button>
         </form>
     </div>
