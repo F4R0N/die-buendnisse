@@ -6,7 +6,7 @@
             <div class="info_hide">Profil</div>
         </li>
         <li>
-            <a href="game.php?page=settings"><img src="/images/profil.png" title="Einstellungen"></a>
+            <a href="game.php?page=settings"><img src="/images/settings.png" title="Einstellungen"></a>
             <div class="info_hide">Einstellungen</div>
         </li>
         <li>
