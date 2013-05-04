@@ -20,7 +20,8 @@ a {
 }
 
 #main_content {
-    margin-left: 4em;
+    margin: auto 4em;
+    min-width: 50em;
 }
 
 
@@ -92,6 +93,7 @@ a {
     border: thin solid black;
     left: 3.7em;
     margin-top: -2.2em;
+    z-index: 9999;
 }
 
 .server_info {
@@ -99,29 +101,6 @@ a {
     font-size: 50%;
     text-align: center;
     margin-top: 5em;
-}
-
-@media only screen and (max-width: 400px){
-    body{
-        margin-top: 8em;
-    }
-
-    #top {
-        position: absolute;
-        line-height: 1;
-    }
-
-    #top ul li {
-        display: block;
-        margin: 0.1em;
-        padding: 0.1em;
-    }
-}
-
-@media only screen and (max-height: 520px){
-    #left{
-        position: absolute;
-    }
 }
 
 #login_overview_field{
@@ -215,4 +194,27 @@ ul#navigation ul li a {
     float:left;
     clear:both;
     width:150px;
+}
+
+@media only screen and (max-width: 400px){
+    body{
+        margin-top: 8em;
+    }
+
+    #top {
+        position: absolute;
+        line-height: 1;
+    }
+
+    #top ul li {
+        display: block;
+        margin: 0.1em;
+        padding: 0.1em;
+    }
+}
+
+@media only screen and (max-height: 520px){
+    #left{
+        position: absolute;
+    }
 }

@@ -9,3 +9,7 @@
         <link href="styles/style.css" rel='stylesheet' type='text/css'>
     </head>
     <body>
+        <header>
+            <h1 class="header center">Die B&uuml;ndnisse</h1>
+        </header>
+        <div id="main_content">

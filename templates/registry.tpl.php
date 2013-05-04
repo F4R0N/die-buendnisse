@@ -1,7 +1,4 @@
 <link href="styles/style-login.css" rel='stylesheet' type='text/css'>
-<header>
-    <h1 class="header center">Die B&uuml;ndnisse</h1>
-</header>
 <div id="box"  class="center">
     <?php if ($data['errors']['felder_leer']): ?>
         <script>
