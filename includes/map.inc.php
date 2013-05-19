@@ -1,5 +1,6 @@
 <?php
 
+
 if(is_numeric($_GET["x"]) && is_numeric($_GET["y"])){
 
 $data["pos"]["x"] = $_GET["x"];
@@ -11,4 +12,5 @@ $data["pos"]["y"] = $_GET["y"];
 }
 
 contain("tpl" ,"map", $data);
+
 ?>

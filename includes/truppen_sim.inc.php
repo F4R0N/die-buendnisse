@@ -1,4 +1,5 @@
 <?php
+
 contain("cfg", "units");
 
 $deff_bonus = $_GET["deff_bonus"];
@@ -6,6 +7,7 @@ $off_bonus = $_GET["off_bonus"];
 $deff_basic = $_GET["deff_basic"];
 
 if (isset($_GET["ausrechnen"])) {
+
     // Truppenanzahl der Kontrahenten vor dem Kampf
     $count = array("atk" => array($_GET["off_sta"], $_GET["off_stw"], $_GET["off_spt"], $_GET["off_spw"], $_GET["off_ks"]),
         "deff" => array($_GET["deff_sta"], $_GET["deff_stw"], $_GET["deff_spt"], $_GET["deff_spw"], $_GET["deff_ks"])

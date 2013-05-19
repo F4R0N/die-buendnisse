@@ -1,8 +1,8 @@
 <?php
-session_start();
+    session_start();
 
-$player = new player($_SESSION['ID']);
+    $player = new player($_SESSION['ID']);
 
-$data['player'] = $player;
+    $data['player'] = $player;
 
-contain("tpl", 'overview');
+    contain("tpl", 'overview');
