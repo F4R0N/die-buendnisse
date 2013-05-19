@@ -9,5 +9,29 @@
 
 #map {
     width: 30em;
-    position: fixed;
+    margin: 0 5em;
+}
+
+#map_move_left {
+    background-color:lime;
+
+}
+
+#map_move_up {
+    background-color:red;
+
+}
+
+#map_move_down {
+    background-color:white;
+
+}
+
+#map_move_right {
+    background-color: blue;
+
+}
+
+.map_move {
+    z-index: -123;
 }
