@@ -1,4 +1,10 @@
 die_buendnisse
 ==============
 
-- created basic folders/files
+Created by 
+
+Twenty Druids Games
+
+or
+
+Balalaika Games
