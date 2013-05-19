@@ -1,4 +1,4 @@
-die_buendnisse
+Game: Die Buendnisse
 ==============
 
 Created by 

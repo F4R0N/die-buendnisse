@@ -1,5 +1,3 @@
 <?php
-
-
-contain("tpl" ,"map");
+    contain("tpl" ,"map");
 ?>
