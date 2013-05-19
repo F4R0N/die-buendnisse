@@ -1,6 +1,6 @@
 <?php
 
-include 'login.class.php';
+contain("class", "login");
 
 if (isset($_POST['Benutzername']) && isset($_POST['Passwort']) && isset($_POST['Einloggen'])) {
     $login = new login();

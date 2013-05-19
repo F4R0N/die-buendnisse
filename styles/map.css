@@ -1,0 +1,11 @@
+#map_field { 
+    display: block;
+    height: 2.5em;
+    width: 2.5em;
+    float: left;
+    border: thin solid black;
+}
+
+#map {
+    width: 30em;
+}

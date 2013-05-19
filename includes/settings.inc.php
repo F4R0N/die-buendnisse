@@ -1,3 +1,3 @@
 <?php
-    include_template("settings");
+    contain("tpl", "settings");
 ?>
