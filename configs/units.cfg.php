@@ -2,7 +2,7 @@
 
 contain("class", "units");
 
-$units = array(
+$units['stone'] = array(
     new unit("Steinaxtkampf", 10, 5, 10), // Off
     new unit("Steinewerfer", 10, 10, 8), // Ausgeglichen
     new unit("Speertrager", 5, 15, 10), // Deff
