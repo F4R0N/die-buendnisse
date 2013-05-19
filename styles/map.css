@@ -4,8 +4,10 @@
     width: 2.5em;
     float: left;
     border: thin solid black;
+    z-index: -99999;
 }
 
 #map {
     width: 30em;
+    position: fixed;
 }

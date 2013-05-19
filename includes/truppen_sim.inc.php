@@ -1,5 +1,5 @@
 <?php
-contain("class", "units");
+contain("cfg", "units");
 
 $deff_bonus = $_GET["deff_bonus"];
 $off_bonus = $_GET["off_bonus"];
