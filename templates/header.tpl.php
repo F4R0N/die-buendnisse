@@ -1,6 +1,10 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+        <meta name="description" content="Die B&uuml;ndnisse: Die gro&szlig;e Reise durch die verschiedenen Epochen!" />
+	<meta name="keywords" content="die, buendnisse, the, confederations, epochen, reise, steinzeit, bronzezeit" />
+	<meta name="author" content="F4R0N, IV1TR0, Blu3Hawk, ThunderISt0rm" />
+	<meta name="designer" content="F4R0N, IV1TR0, Blu3Hawk, ThunderISt0rm" />
         <title>
             Die B&uuml;ndnisse
         </title>
