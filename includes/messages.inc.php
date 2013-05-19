@@ -6,7 +6,7 @@ $allowed_modi = array(
     'read',
 );
 
-$mode = $_GET['mode'];
+$mode = $_GET["mode"];
 
-include_template('messages');
+contain("tpl", "messages");
 ?>

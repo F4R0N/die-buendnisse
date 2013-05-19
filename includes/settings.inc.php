@@ -1,0 +1,3 @@
+<?php
+    contain("tpl", "settings");
+?>

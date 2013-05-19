@@ -5,10 +5,11 @@ $time_start = microtime(true);
 session_start();
 
 include "../private/mysql.php";
-include "includes/player.class.php";
-include "includes/check_login.php";
-include "includes/include.php";
-include "includes/login.class.php";
+include "includes/include.inc.php";
+contain("class", "player");
+contain("class", "login");
+contain("inc", "check_login");
+
 
 if (!isset($_SESSION['ID'])) {
     header('LOCATION: index.php');
@@ -33,13 +34,13 @@ if (!isset($page_name) || !in_array($_GET['page'], $allowed_pages)) {
     $page_name = "overview";
 }
 
-include_template("header");
-include_template("menu_top");
-include_template("menu_left");
-include_includes($page_name);
+contain("tpl", "header");
+contain("tpl", "menu/top");
+contain("tpl", "menu/left");
+contain("inc", $page_name);
 
 $time_end = microtime(true);
 $data['time'] = round(($time_end - $time_start) * 1000);
 
-include_template("footer", $data);
+contain("tpl", "footer", $data);
 ?>
