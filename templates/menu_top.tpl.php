@@ -9,5 +9,8 @@
         <li>
             <a href="#">Politik</a>
         </li>
+        <li>
+            <a href="?page=map">Karte</a>
+        </li>
     </ul>
 </nav>

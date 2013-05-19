@@ -5,10 +5,10 @@ $time_start = microtime(true);
 session_start();
 
 include "../private/mysql.php";
-include "includes/player.class.php";
-include "includes/check_login.php";
-include "includes/include.php";
-include "includes/login.class.php";
+include "classes/player.class.php";
+include "includes/check_login.inc.php";
+include "includes/include.inc.php";
+include "classes/login.class.php";
 
 if (!isset($_SESSION['ID'])) {
     header('LOCATION: index.php');

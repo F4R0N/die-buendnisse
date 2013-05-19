@@ -3,7 +3,7 @@
 session_start();
 
 include "../private/mysql.php";
-include "includes/include.php";
+include "includes/include.inc.php";
 
 $allowed_pages = array(
     'login',

@@ -18,7 +18,7 @@ function include_template($tpl_name, $data = array()) {
 
 function include_includes($inc_name, $data = array()) {
 
-    $path = 'includes/' . $inc_name . '.php';
+    $path = 'includes/' . $inc_name . '.inc.php';
 
     if (file_exists($path)) {
         include $path;
