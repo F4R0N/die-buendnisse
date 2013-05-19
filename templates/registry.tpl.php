@@ -25,6 +25,9 @@
         <?php if ($data['errors']['benutzername_laenge']): ?>
             <div class="error">Benutzername ist zu lang! (max 32 Zeichen)</div>
         <?php endif; ?>
+        <?php if($data['errors']['username_leer']): ?>
+            <div class="error">Ein Benutzername muss angegeben sein!</div>
+        <?php endif; ?>
         </input>
         <input type="password" name="passwort" placeholder="Passwort">
         <?php if ($data['errors']['passwort_laenge']): ?>
