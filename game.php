@@ -22,11 +22,12 @@ if ($_GET['logout']) {
 }
 
 $allowed_pages = array(
-    'overview',
-    'messages',
-    'map',
-    'settings'
-);
+    "overview",
+    "messages",
+    "map",
+    "settings",
+    "research"
+ );
 
 $page_name = $_GET['page'];
 

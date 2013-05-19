@@ -4,7 +4,7 @@
             <a href="/game.php?page=overview">Startseite</a>
         </li>
         <li>
-            <a href="#">Forschung</a>
+            <a href="/game.php?page=research">Forschung</a>
         </li>
         <li>
             <a href="#">Politik</a>

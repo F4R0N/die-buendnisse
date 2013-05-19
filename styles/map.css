@@ -1,21 +1,21 @@
 #map_field { 
     display: block;
-    height: 2.5em;
-    width: 2.5em;
+    height: 100px;
+    width: 100px;
     float: left;
     border: 1px solid black;
     z-index: -99999;
     background-color: greenyellow;
 }
 
-#map {
-    width: 30em;
-    margin: 0 5em;
+#map_field img {
+    height: 100px;
+    width: 100px;
 }
 
+
 .map_move {
-    z-index: -123;
-    position: inline-block;
+    position: block;
 }
 
 .map_info_hide {
