@@ -10,3 +10,11 @@ if (isset($_POST['Benutzername']) && isset($_POST['Passwort']) && isset($_POST['
     else
         $data['login_msg'] = 'Login fehlgeschlagen!';
 }
+
+
+if ($data['login'])
+    header('LOCATION: /game.php');
+
+
+
+contain("tpl", "login");

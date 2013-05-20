@@ -25,7 +25,6 @@ class player {
             WHERE ID = "' . $ID . '"            
         ');
 
-
         $row = mysql_fetch_assoc($result);
 
         $this->username = $row['username'];
@@ -43,8 +42,8 @@ class player {
         ');
         $this->village_count = mysql_num_rows($result);
         $mysql_connection->close_MYSQL();
+        
     }
-
 }
 
 ?>

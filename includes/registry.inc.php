@@ -1,19 +1,20 @@
 <?php
 
-$username = $_POST['benutzername'];
-$passwort = $_POST['passwort'];
-$passwort_wdh = $_POST['passwort_wdh'];
-$email = $_POST['email'];
-$check_agbs = $_POST['agbs'];
-
 if ($_POST['registrieren']) {
+
+    $username = $_POST['benutzername'];
+    $passwort = $_POST['passwort'];
+    $passwort_wdh = $_POST['passwort_wdh'];
+    $email = $_POST['email'];
+    $check_agbs = $_POST['agbs'];
+
     $mysql_connection = new mysql_connection();
     $mysql_connection->connect_MYSQL();
     $errors = array();
     $result = mysql_query("SELECT ID FROM users WHERE username = '" . $username . "'") or die(mysql_error());
     if (mysql_num_rows($result) != 0)
         $errors['benutzername_vorhanden'] = true;
-    if(strlen($username) == 0)
+    if (strlen($username) == 0)
         $errors['username_leer'] = true;
     $result = mysql_query("SELECT ID FROM users WHERE email = '" . $email . "'");
     if (mysql_num_rows($result) != 0)
@@ -57,4 +58,6 @@ if ($_POST['registrieren']) {
 
     $mysql_connection->close_MYSQL();
 }
+
+contain("tpl", "registry", $data);
 ?>

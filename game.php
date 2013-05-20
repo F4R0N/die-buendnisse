@@ -13,6 +13,15 @@ contain("inc", "check_login");
 
 if (!isset($_SESSION['ID'])) {
     header('LOCATION: index.php');
+    exit();
+}
+
+$player = new player($_SESSION['ID']);
+
+$data['player'] = $player;
+
+if ($player->village_count == 0){
+    header('LOCATION: index.php?page=create_village');
 }
 
 if ($_GET['logout']) {
@@ -26,8 +35,7 @@ $allowed_pages = array(
     "messages",
     "map",
     "settings",
-    "research",
-    "create_village"
+    "research"
  );
 
 $page_name = $_GET['page'];
@@ -39,7 +47,7 @@ if (!isset($page_name) || !in_array($_GET['page'], $allowed_pages)) {
 contain("tpl", "header");
 contain("tpl", "menu/top");
 contain("tpl", "menu/left");
-contain("inc", $page_name);
+contain("inc", $page_name, $data);
 
 $time_end = microtime(true);
 $data['time'] = round(($time_end - $time_start) * 1000);
