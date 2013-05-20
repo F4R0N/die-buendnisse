@@ -26,7 +26,8 @@ $allowed_pages = array(
     "messages",
     "map",
     "settings",
-    "research"
+    "research",
+    "create_village"
  );
 
 $page_name = $_GET['page'];
