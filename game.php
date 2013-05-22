@@ -1,5 +1,4 @@
 <?php
-
 $time_start = microtime(true);
 
 session_start();
@@ -7,6 +6,7 @@ session_start();
 include "../private/mysql.php";
 include "includes/include.inc.php";
 contain("class", "player");
+contain("class", "village");
 contain("class", "login");
 contain("inc", "check_login");
 

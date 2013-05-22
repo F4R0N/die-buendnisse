@@ -8,6 +8,7 @@ class player {
     public $last_action;
     public $last_login;
     public $village_count;
+    public $current_village;
 
     public function __construct($ID) {
         $mysql_connection = new mysql_connection();
@@ -41,8 +42,9 @@ class player {
             WHERE UserID = "' . $this->ID . '"         
         ');
         $this->village_count = mysql_num_rows($result);
+        $row = mysql_fetch_assoc($result);
+        $this->current_village = $row["ID"];
         $mysql_connection->close_MYSQL();
-        
     }
 }
 

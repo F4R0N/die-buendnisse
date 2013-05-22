@@ -1,17 +1,15 @@
 <?php
 
-$player = new player($_SESSION['ID']);
-
-$data['player'] = $player;
-
 
 if (is_numeric($_GET["x"]) && is_numeric($_GET["y"])) {
-
     $data["pos"]["x"] = $_GET["x"];
     $data["pos"]["y"] = $_GET["y"];
 } else {
-    $data["pos"]["x"] = 0;
-    $data["pos"]["y"] = 0;
+    $village = new village($data["player"]->current_village);
+    
+    $data["pos"]["x"] = $village->position["x"];
+    $data["pos"]["y"] = $village->position["y"];
+   
 }
 if (is_numeric($_GET["size"])) {
     $data["map"]["size"] = $_GET["size"];
@@ -35,9 +33,9 @@ $result = mysql_query("
 
 
 while ($row = mysql_fetch_assoc($result)) {
-    $data["map"]["fields"][$row['x']][$row['x']]['image'] = $row['img'];
-    $data["map"]["fields"][$row['x']][$row['x']]['ID'] = $row['ID'];
-    $data["map"]["fields"][$row['x']][$row['x']]['UserID'] = $row['UserID'];
+    $data["map"]["fields"][$row['x']][$row['y']]['image'] = "/images/map/" . $row["epoch"] . $row["level"] . ".png";
+    $data["map"]["fields"][$row['x']][$row['y']]['ID'] = $row['ID'];
+    $data["map"]["fields"][$row['x']][$row['y']]['UserID'] = $row['UserID'];
 }
 
 $mysql_connection->close_MYSQL();
