@@ -1,45 +1,24 @@
 <?php
 
+contain("class", "map");
 
 if (is_numeric($_GET["x"]) && is_numeric($_GET["y"])) {
-    $data["pos"]["x"] = $_GET["x"];
-    $data["pos"]["y"] = $_GET["y"];
+    $x = $_GET["x"];
+    $y = $_GET["y"];
 } else {
     $village = new village($data["player"]->current_village);
-    
-    $data["pos"]["x"] = $village->position["x"];
-    $data["pos"]["y"] = $village->position["y"];
-   
-}
-if (is_numeric($_GET["size"])) {
-    $data["map"]["size"] = $_GET["size"];
-} else {
-    $data["map"]["size"] = 3;
+
+    $x = $village->position["x"];
+    $y = $village->position["y"];
 }
 
-$mysql_connection = new mysql_connection();
-$mysql_connection->connect_MYSQL();
+$map = new map($x, $y, $_GET["size"]);
 
-$result = mysql_query("
-    SELECT 
-        * 
-    FROM 
-        map
-    WHERE
-        x <= " . ($data["pos"]["x"] + $data["map"]["size"]) . " and 
-        x >= " . ($data["pos"]["x"] - $data["map"]["size"]) . " and
-        y <= " . ($data["pos"]["y"] + $data["map"]["size"]) . " and
-        y >= " . ($data["pos"]["y"] - $data["map"]["size"]));
+$data["map"] = $map->getMapFields();
+$data["map"]["size"] = $map->size;
 
-
-while ($row = mysql_fetch_assoc($result)) {
-    $data["map"]["fields"][$row['x']][$row['y']]['image'] = "/images/map/" . $row["epoch"] . $row["level"] . ".png";
-    $data["map"]["fields"][$row['x']][$row['y']]['ID'] = $row['ID'];
-    $data["map"]["fields"][$row['x']][$row['y']]['UserID'] = $row['UserID'];
-}
-
-$mysql_connection->close_MYSQL();
-
+$data["pos"]["x"] = $map->position["x"];
+$data["pos"]["y"] = $map->position["y"];
 
 contain("tpl", "map", $data);
 ?>

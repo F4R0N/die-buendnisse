@@ -2,7 +2,7 @@
 
 function contain($type, $name, $data = array()) {
 
-    $types = array("inc" => "includes", "class" => "classes", "tpl" => "templates", "cfg" => "configs");
+    $types = array("inc" => "includes", "class" => "classes", "tpl" => "templates", "cfg" => "configs", "ajax" => "ajax");
         
     $path = $types[$type] . '/' . $name . '.' . $type . '.php';
     
