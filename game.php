@@ -1,4 +1,6 @@
 <?php
+
+
 $time_start = microtime(true);
 
 session_start();
@@ -35,7 +37,8 @@ $allowed_pages = array(
     "messages",
     "map",
     "settings",
-    "research"
+    "research",
+    "simulator"
  );
 
 $page_name = $_GET['page'];

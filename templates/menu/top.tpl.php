@@ -12,5 +12,8 @@
         <li>
             <a href="?page=map">Karte</a>
         </li>
+        <li>
+            <a href="?page=simulator">Simulator</a>
+        </li>
     </ul>
 </nav>
