@@ -16,8 +16,8 @@ if (isset($_GET["ausrechnen"])) {
     echo "<table border='1'>";
     for ($i = 0; $i < count($units); $i++) {
         echo "<tr>";
-        echo "<td>" . $units[$i]->name . ": " . round($count["atk"][$i], 0) . "</td>";
-        echo "<td>" . $units[$i]->name . ": " . round($count["deff"][$i], 0) . "</td>";
+            echo "<td>" . $units[$i]->name . ": " . round($count["atk"][$i], 0) . "</td>";
+            echo "<td>" . $units[$i]->name . ": " . round($count["deff"][$i], 0) . "</td>";
         echo "</tr>";
     }
     echo "</table>";
@@ -79,8 +79,8 @@ if (isset($_GET["ausrechnen"])) {
     echo "<table border='1'>";
     for ($i = 0; $i < count($units); $i++) {
         echo "<tr>";
-        echo "<td>" . $units[$i]->name . ": " . round($count["atk"][$i], 0) . "</td>";
-        echo "<td>" . $units[$i]->name . ": " . round($count["deff"][$i], 0) . "</td>";
+            echo "<td>" . $units[$i]->name . ": " . round($count["atk"][$i], 0) . "</td>";
+            echo "<td>" . $units[$i]->name . ": " . round($count["deff"][$i], 0) . "</td>";
         echo "</tr>";
     }
     echo "</table>";
