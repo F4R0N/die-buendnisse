@@ -32,7 +32,6 @@ if (isset($_POST["found"]) && $player->village_count == 0) {
     ");
 
     $mysql_connection->close_MYSQL();
-    echo "Success!";
     header("LOCATION: game.php");
 }
 

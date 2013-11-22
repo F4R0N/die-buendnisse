@@ -51,8 +51,9 @@ $(document).ready(
                         var y_max = $(".row:last #map_field:first").data("y");
                         alert(x + " " + y + " " + y_max);
                         $(".row #map_field:last-child").remove();
-                        for (var i = 1; i <= 5; i++)
+                        for (var i = 1; i < 7; i++){
                             $(".row:nth-of-type(" + i + ") #map_field:first-child").before("<div id='map_field'></div>");
+                        }
                         break;
                     case "s":
                         var y = $(".row:last-of-type #map_field").data("y") - 1;

@@ -23,7 +23,6 @@
 }
 
 .map_info_show {
-    display: default;
     position: absolute;
     padding: 0.25em;
     border-radius: 5px;
