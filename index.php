@@ -6,6 +6,8 @@ include "../private/mysql.php";
 include "includes/include.inc.php";
 contain("class", "player");
 
+// HI
+
 $allowed_pages = array(
     "login",
     "registry",
