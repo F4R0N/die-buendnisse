@@ -12,6 +12,8 @@ $allowed_pages = array(
     "create_village"
 );
 
+// HI
+
 $page_name = $_GET['page'];
 
 if (!isset($page_name) || !in_array($_GET['page'], $allowed_pages)) {
