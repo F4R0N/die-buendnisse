@@ -26,7 +26,7 @@ $(document).ready(
                         var x = $(".row:first #map_field").data("x");
                         var x_max = $(".row:first #map_field:last-of-type").data("x");
 
-                        $.getJSON("http://die-buendnisse.local/ajax.php?page=map&getRow=true&x=" + x + "&y=" + y + "&x_max=" + x_max, function(data) {
+                        $.getJSON("/ajax.php?page=map&getRow=true&x=" + x + "&y=" + y + "&x_max=" + x_max, function(data) {
                             $(".row:last-of-type").remove();
                             $(".row:first").before("<div class='row'></div>");
                             for (var i = x; i <= x_max; i++) {
@@ -59,7 +59,7 @@ $(document).ready(
                         var y = $(".row:last-of-type #map_field").data("y") - 1;
                         var x = $(".row:last-of-type #map_field").data("x");
                         var x_max = $(".row:last-of-type #map_field:last-of-type").data("x");
-                        $.getJSON("http://die-buendnisse.local/ajax.php?page=map&getRow=true&x=" + x + "&y=" + y + "&x_max=" + x_max, function(data) {
+                        $.getJSON("/ajax.php?page=map&getRow=true&x=" + x + "&y=" + y + "&x_max=" + x_max, function(data) {
                             $(".row:first").remove();
                             $(".row:last-of-type").after("<div class='row'></div>");
                             for (var i = x; i <= x_max; i++) {
