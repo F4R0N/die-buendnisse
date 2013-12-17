@@ -1,0 +1,87 @@
+
+header {
+    text-align: right; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    padding: 10px; 
+    background-color: midnightblue; 
+    color: white;
+}
+
+a:active, a:visited, a {
+    color: white;
+    text-decoration: none;
+}
+
+#content {
+    margin: 5em;
+}
+
+#content a {
+    color: blue;
+}
+
+#addTopic {
+    display: none;
+}
+
+#addTopic {
+    padding: 2em;
+    background-color: white;
+    z-index: 1;
+    top: 15%;
+    left: 50%;
+    position: fixed;
+    margin-left: -17em; 
+    /* margin-left: - the half of width of the box (+ padding)*/
+}
+
+#addTopic label {
+    display: block;
+    margin: 5px;
+}
+
+#addTopic textarea {
+    width: 25em;
+    height: 5em;
+}
+
+#addTopic input[type="text"] {
+    width: 20em;
+}
+
+#addTopic #formAdd {
+    width: 30em;
+    margin: 0px auto;
+    text-align: center;
+}
+
+#addTopic #formAdd #Elements {
+    margin: 5px auto;
+    margin-top: 1em;
+    overflow: auto;
+    width: 25em; 
+    height: 20em;
+}
+
+#addTopic #close {
+    float: right;
+    color: white;
+    background-color: red;
+    border-radius: 100%;
+    padding: 0.5em;
+}
+
+#addTopicLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.75;
+    display: none;
+    z-index: 0;
+}
