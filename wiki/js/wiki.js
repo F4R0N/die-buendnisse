@@ -1,31 +1,43 @@
-function addNewElement() {
+function addNewElement(type) {
 
-    document.getElementById("Elements").appendChild(document.createElement("label"));
-    document.getElementById("Elements").lastElementChild.innerHTML = "Element";
+    document.getElementById(type + "Elements").appendChild(document.createElement("label"));
+    document.getElementById(type + "Elements").lastElementChild.innerHTML = "Element";
     var textarea = document.createElement("textarea");
     textarea.setAttribute("name", "elements[]");
-    document.getElementById("Elements").appendChild(textarea);
-    document.getElementById("Elements").lastElementChild.focus();
+    document.getElementById(type + "Elements").appendChild(textarea);
+    document.getElementById(type + "Elements").lastElementChild.focus();
 
 }
 
-function openAddNewTopic() {
-    
-    document.getElementById("addTopic").style.display = "block";
-    document.getElementById("addTopicLayer").style.display = "block";
-    
+function openTopicWindow(type) {
+
+    document.getElementById(type).style.display = "block";
+    document.getElementById("Layer").style.display = "block";
+
 }
 
-function closeAddTopic() {
-    
-    document.getElementById("addTopic").style.display = "none";
-    document.getElementById("addTopicLayer").style.display = "none";
-    
+function closeTopicWindow(type) {
+
+    document.getElementById(type).style.display = "none";
+    document.getElementById("Layer").style.display = "none";
+
 }
 
-function clearForm() {
-    if(confirm("Do you realy want to clear this form?")){
-        document.getElementById("formAdd").reset();
+function clearForm(type) {
+    if (confirm("Do you realy want to clear this form?")) {
+        document.getElementById(type + "Form").reset();
     }
-   
+
+}
+
+function deleteTopic(ID) {
+    if (confirm("Do you really want to delete this topic?")) {
+        window.location.href = "delete.php?deleteTopic=1&ID=" + ID;
+    }
+}
+
+function deleteTopicElement(ID) {
+    if (confirm("Do you really want to delete this topic element?")) {
+        window.location.href = "delete.php?deleteTopicElement=1&ID=" + ID;
+    }
 }

@@ -2,6 +2,8 @@
 
 include_once "../../private/mysql.php";
 include "add.php";
+include "edit.php";
+
 
 if (!is_null($_GET["topic"]) || !is_null($_GET["topicID"])) {
     // Connect to the database!
@@ -49,10 +51,11 @@ if (!is_null($_GET["topic"]) || !is_null($_GET["topicID"])) {
     if (!$failed) {
         // Show results!
         if (!is_null($topicID)) {
-
+            $elements = [];
             // Fetch all elements for the TopicID
             $sql = "SELECT 
-                    Element 
+                    Element,
+                    ID
                 From 
                     wiki_topic_element
                 Where 
@@ -66,6 +69,7 @@ if (!is_null($_GET["topic"]) || !is_null($_GET["topicID"])) {
             $html .= "<ul>";
             while ($obj = mysql_fetch_object($result)) {
                 $html .= "<li>" . $obj->Element . "</li>";
+                $elements[] = $obj;
             }
             $html .= "</ul>";
         } else {

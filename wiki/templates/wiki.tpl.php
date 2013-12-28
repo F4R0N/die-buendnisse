@@ -1,10 +1,10 @@
 <html>
     <head>
-        <? if (isset($topic)): ?>
+        <?php if (isset($topic)): ?>
             <title><?= $topic; ?></title>
-        <? else: ?>
+        <?php else: ?>
             <title>Wiki</title>
-        <? endif; ?>
+        <?php endif; ?>
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
         <script src="js/wiki.js"></script>
     </head>
@@ -17,5 +17,8 @@
             <?= $html; ?>
         </div>
             <?php include "templates/add.tpl.php"; ?>
+            <?php if (isset($topic)): ?>
+                <?php include "templates/edit.tpl.php"; ?>
+            <?php endif; ?>
     </body>
 </html>
