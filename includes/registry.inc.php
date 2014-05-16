@@ -59,5 +59,6 @@ if ($_POST['registrieren']) {
     $mysql_connection->close_MYSQL();
 }
 
+contain("tpl", "header");
 contain("tpl", "registry", $data);
 ?>

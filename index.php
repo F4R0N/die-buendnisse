@@ -20,8 +20,6 @@ if (!isset($page_name) || !in_array($_GET['page'], $allowed_pages)) {
     $page_name = "login";
 }
 
-
-contain("tpl", "header");
 contain("inc", $page_name);
 contain("tpl", "footer");
 
